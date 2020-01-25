@@ -1,0 +1,12 @@
+{
+  "name": "lit-element",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Shane Riley",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@vaadin/router": "^1.6.0",
+    "lit-element": "^2.2.1"
+  }
+}
