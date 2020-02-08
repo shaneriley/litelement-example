@@ -1,0 +1,38 @@
+{
+  "headings": [
+    "ID",
+    "Console",
+    "Name",
+    "Price",
+    "Box",
+    "Manual",
+    "Sold?"
+  ],
+  "rows": [
+    {
+      "id": 1,
+      "console": "Virtual Boy",
+      "name": "Wario Land",
+      "price": "15",
+      "box": false,
+      "manual": false,
+      "sold": true
+    }, {
+      "id": 2,
+      "console": "Virtual Boy",
+      "name": "Nester's Funky Bowling",
+      "price": "90",
+      "box": true,
+      "manual": true,
+      "sold": true
+    }, {
+      "id": 3,
+      "console": "Sony PlayStation 2",
+      "name": "Rule of Rose",
+      "price": "300",
+      "box": true,
+      "manual": true,
+      "sold": false
+    }
+  ]
+}

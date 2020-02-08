@@ -15,5 +15,12 @@ router.setRoutes([
       { path: '/:slug', component: 'blog-post' },
     ],
   },
+  {
+    path: '/sortable-table',
+    component: 'sortable-table',
+    bundle: {
+      module: './modules/sortable-table.js'
+    },
+  },
   { path: '(.*)', component: 'http-404' },
 ]);
