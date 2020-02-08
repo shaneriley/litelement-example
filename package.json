@@ -7,6 +7,17 @@
   "private": true,
   "dependencies": {
     "@vaadin/router": "^1.6.0",
-    "lit-element": "^2.2.1"
+    "@webcomponents/webcomponentsjs": "^2.4.1",
+    "lit-element": "^2.2.1",
+    "lit-html": "^1.1.2",
+    "snowpack": "^1.1.4"
+  },
+  "scripts": {
+    "postinstall": "mkdir -p modules/build && snowpack && cp -pr node_modules/@webcomponents/webcomponentsjs modules/build/",
+    "start": "yarn start:dev",
+    "start:dev": "http-server --proxy http://localhost:8080?"
+  },
+  "vaadin": {
+    "disableUsageStatistics": true
   }
 }

@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html, css } from '../../web_modules/lit-element.js';
 
 customElements.define('post-time', class extends LitElement {
   constructor() {

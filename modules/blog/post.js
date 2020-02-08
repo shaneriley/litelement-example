@@ -1,8 +1,7 @@
-import { LitElement, html, css } from 'lit-element';
-import { unsafeHTML } from 'lit-html/directives/unsafe-html';
-import baseStyles from '../css/base';
-import posts from './posts';
-import './post-time';
+import { LitElement, html, css } from '../../web_modules/lit-element.js';
+import baseStyles from '../css/base.js';
+import posts from './posts.js';
+import './post-time.js';
 
 class BlogPost extends LitElement {
   static get styles() {
@@ -25,8 +24,8 @@ class BlogPost extends LitElement {
         <section>
           <article>
             <p><post-time datetime=${post.date}></post-time></p>
-            ${unsafeHTML(post.summary)}
-            ${unsafeHTML(post.body)}
+            ${post.summary}
+            ${post.body}
           </article>
         </section>
       </main>

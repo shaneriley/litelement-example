@@ -1,14 +1,13 @@
-import { LitElement, html, css } from 'lit-element';
-import { unsafeHTML } from 'lit-html/directives/unsafe-html';
-import baseStyles from '../css/base';
-import posts from './posts';
-import './post-time';
+import { LitElement, html, css } from '../../web_modules/lit-element.js';
+import baseStyles from '../css/base.js';
+import posts from './posts.js';
+import './post-time.js';
 
 const postTmpl = (post) => (html`
   <article>
     <h2><a href="/blog/${post.slug}">${post.title}</a></h2>
     <p><post-time datetime="${post.date}"></post-time></p>
-    ${unsafeHTML(post.summary)}
+    ${post.summary}
   </article>
 `);
 

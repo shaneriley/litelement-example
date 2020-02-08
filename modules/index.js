@@ -1,5 +1,5 @@
-import { LitElement, html, css } from 'lit-element';
-import baseStyles from './css/base';
+import { LitElement, html, css } from '../web_modules/lit-element.js';
+import baseStyles from './css/base.js';
 
 class IndexPage extends LitElement {
   static get styles() {

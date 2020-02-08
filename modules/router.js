@@ -1,8 +1,8 @@
-import { Router } from '@vaadin/router';
-import './';
-import './404';
-import './blog/';
-import './blog/post';
+import { Router } from '../web_modules/@vaadin/router.js';
+import './index.js';
+import './404.js';
+import './blog/index.js';
+import './blog/post.js';
 
 const router = new Router(document.body);
 
