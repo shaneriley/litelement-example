@@ -5,6 +5,9 @@ class SortableTable extends LitElement {
   constructor() {
     super();
     this.headings = [];
+    this.rows = [];
+    this.column_sorted = 'id';
+    this.direction = 'ascending';
   }
 
   onBeforeEnter() {
@@ -20,7 +23,8 @@ class SortableTable extends LitElement {
   }
 
   renderHeadings() {
-    return this.headings.map((h) => html`<th>${h}</th>`);
+    const sorted_class = (h) => this.column_sorted === h.id ? `sorted ${this.direction}` : '';
+    return this.headings.map((h) => html`<th class=${sorted_class(h)} @click=${(e) => this.sortRows(e, h.id)}>${h.name}</th>`);
   }
 
   renderYesNo(bool) {
@@ -45,6 +49,34 @@ class SortableTable extends LitElement {
         </tr>
       `
     ));
+  }
+
+  setDirection(column) {
+    if (this.column_sorted !== column) {
+      this.direction = 'ascending';
+      return;
+    }
+    this.direction = /^a/.test(this.direction) ? 'descending' : 'ascending';
+  }
+
+  sortRows(e, column) {
+    this.setDirection(column);
+    this.column_sorted = column;
+    const sort = {
+      ascending: (a, b) => a[column] > b[column] ? 1 : a[column] < b[column] ? -1 : 0,
+      descending: (a, b) => a[column] < b[column] ? 1 : a[column] > b[column] ? -1 : 0
+    };
+    const sorted_rows = this.rows.sort(sort[this.direction]);
+    this.rows = sorted_rows;
+  }
+
+  static get properties() {
+    return {
+      headings: { type: Array },
+      rows: { type: Array },
+      column_sorted: { type: String },
+      direction: { type: String },
+    };
   }
 
   static get styles() {

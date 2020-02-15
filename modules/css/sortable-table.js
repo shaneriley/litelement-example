@@ -17,6 +17,19 @@ export default css`
     border-bottom: 2px solid #ccc;
   }
 
+  .sorted {
+    color: #0066cc;
+    background: #f0f033;
+  }
+  .sorted:after {
+    /* ∆ */
+    content: "\\2206";
+  }
+  .descending:after {
+    /* ∇ */
+    content: "\\2207";
+  }
+
   td {
     padding: .5rem 1rem;
   }

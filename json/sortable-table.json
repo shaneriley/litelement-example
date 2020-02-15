@@ -1,12 +1,12 @@
 {
   "headings": [
-    "ID",
-    "Console",
-    "Name",
-    "Price",
-    "Box",
-    "Manual",
-    "Sold?"
+    { "id": "id", "name": "ID" },
+    { "id": "console", "name": "Console" },
+    { "id": "name", "name": "Name" },
+    { "id": "price", "name": "Price" },
+    { "id": "box", "name": "Box" },
+    { "id": "manual", "name": "Manual" },
+    { "id": "sold", "name": "Sold?" }
   ],
   "rows": [
     {
